@@ -20,16 +20,16 @@ export default function App() {
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-          onPress={incrementCounter}
-          style={[styles.button, styles.incrementButton]}
-        >
-        <Text style={styles.buttonText}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={incrementCounter}
+          onPress={decrementCounter}
           style={[styles.button, styles.decrementButton, counter === 0 && styles.disabledButton]}
         >
           <Text style={styles.buttonText}>-</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={incrementCounter}
+          style={[styles.button, styles.incrementButton]}
+        >
+          <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -39,35 +39,43 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#05dddd',
     alignItems: 'center',
     justifyContent: 'center',
   },
   counterContainer: {
-
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20
   },
   counterHead: {
-
+    fontSize: 70,
   },
   counterText: {
-
+    fontSize: 50,
   },
   buttonContainer: {
-
+    flexDirection: 'row'
   },
   button: {
-
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginHorizontal: 10
   },
   incrementButton: {
-
+    backgroundColor: 'green'
   },
   decrementButton: {
-
+    backgroundColor: 'red'
   },
   buttonText: {
-
+    fontSize: 24,
+    color: 'white'
   },
   disabledButton: {
-
+    backgroundColor: 'grey'
   }
 });
