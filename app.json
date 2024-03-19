@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1c66f808-4b43-4782-a050-d6685d1e6c92"
+      }
+    },
+    "owner": "rocklobster84"
   }
 }
