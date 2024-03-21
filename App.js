@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity, ViewComponent} from 'react-native';
+import {StyleSheet, Text, View, Pressable, ViewComponent} from 'react-native';
 import React, {useState} from 'react';
 
 export default function App() {
@@ -19,18 +19,18 @@ export default function App() {
         <Text style={styles.counterText}>{counter}</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity
+        <Pressable
           onPress={decrementCounter}
           style={[styles.button, styles.decrementButton, counter === 0 && styles.disabledButton]}
         >
           <Text style={styles.buttonText}>-</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </Pressable>
+        <Pressable
           onPress={incrementCounter}
           style={[styles.button, styles.incrementButton]}
         >
           <Text style={styles.buttonText}>+</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   counterHead: {
-    fontSize: 70,
+    fontSize: 60,
   },
   counterText: {
     fontSize: 50,
